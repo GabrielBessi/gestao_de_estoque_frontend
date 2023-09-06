@@ -19,4 +19,14 @@ export const GlobalStyle = createGlobalStyle`
         width: 70%;
     }
 
+    h1, ul, li {
+        color: black;
+        font-weight: 800;
+    }
+
+    body {
+        display: flex;
+
+        align-items: flex-start;
+    }
 `;
