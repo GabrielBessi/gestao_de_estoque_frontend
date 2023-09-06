@@ -1,5 +1,13 @@
 import { styled } from "styled-components";
 
+export const PositionForm = styled.div`
+  display: flex;
+
+  height: 100vh;
+
+  align-items: center;
+`;
+
 export const HeaderForm = styled.div`
   display: flex;
 
