@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     h1, ul, li {
         color: black;
         font-weight: 800;
+        list-style-type: none;
     }
 
     body {

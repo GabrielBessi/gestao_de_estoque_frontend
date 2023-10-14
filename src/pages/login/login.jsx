@@ -3,11 +3,11 @@ import { HeaderForm, LoginForm, PositionForm } from "./styles";
 import Input from "../../components/inputs/input";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../../services/api";
-import { loginStore } from "../../store/loginStore";
+// import { loginStore } from "../../store/loginStore";
 
 function LoginPage() {
   const { register, handleSubmit } = useForm();
-  const user = loginStore((state) => state.login);
+  // const user = loginStore((state) => state.login);
   const navigate = useNavigate();
 
   function loginUser(dataUser) {
@@ -17,7 +17,7 @@ function LoginPage() {
         console.log(response);
         console.log(response.data.token);
         const { token } = response.data;
-        user(response.data.user);
+        // user(response.data.user);
 
         localStorage.setItem("estoque:token", token);
 

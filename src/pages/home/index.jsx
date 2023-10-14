@@ -1,6 +1,7 @@
+import ShoppingList from "../../components/boards/shoppingList";
 import Header from "../../components/header";
 import { loginStore } from "../../store/loginStore";
-import { HeaderStyle } from "./style";
+import { BoardsHomeStyle, HeaderStyle } from "./style";
 
 function HomePage() {
   const dataUser = loginStore((state) => state.user);
@@ -8,9 +9,16 @@ function HomePage() {
   console.log(dataUser);
 
   return (
-    <HeaderStyle>
-      <Header />
-    </HeaderStyle>
+    <>
+      <HeaderStyle>
+        <Header />
+      </HeaderStyle>
+      <BoardsHomeStyle>
+        <div>
+          <ShoppingList />
+        </div>
+      </BoardsHomeStyle>
+    </>
   );
 }
 
