@@ -3,7 +3,7 @@ import { ListProductsStyle, ShoppingStyle } from "./style";
 function ShoppingList() {
   return (
     <ShoppingStyle>
-      <p>Alertas</p>
+      <p>Lista de compras</p>
       <ListProductsStyle>
         <li>
           <span>PRODUTOS</span>
