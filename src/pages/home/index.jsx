@@ -1,3 +1,4 @@
+import OutPutProduct from "../../components/boards/outPutProduct";
 import ShoppingList from "../../components/boards/shoppingList";
 import Header from "../../components/header";
 import { loginStore } from "../../store/loginStore";
@@ -16,6 +17,7 @@ function HomePage() {
       <BoardsHomeStyle>
         <div>
           <ShoppingList />
+          <OutPutProduct />
         </div>
       </BoardsHomeStyle>
     </>

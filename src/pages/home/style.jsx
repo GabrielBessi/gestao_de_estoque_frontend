@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const HeaderStyle = styled.header`
   display: flex;
 
-  width: 100vw;
+  /* width: 100vw; */
   height: 6.615vh;
 
   align-items: center;
@@ -22,6 +22,9 @@ export const BoardsHomeStyle = styled.main`
 
   div {
     display: flex;
+    justify-content: space-around;
+
+    width: 90vw;
 
     margin-left: 60px;
   }

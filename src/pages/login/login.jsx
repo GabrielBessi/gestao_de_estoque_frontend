@@ -14,16 +14,14 @@ function LoginPage() {
     api
       .post("/users/login", dataUser)
       .then((response) => {
-        console.log(response);
-        console.log(response.data.token);
+        // console.log(response);
+        // console.log(response.data.token);
         const { token } = response.data;
         // user(response.data.user);
 
         localStorage.setItem("estoque:token", token);
 
         api.defaults.headers.authorization = `Bearer ${token}`;
-
-        <Input value={""} />;
 
         navigate("home");
       })

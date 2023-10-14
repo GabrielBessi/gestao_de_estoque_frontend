@@ -1,9 +1,18 @@
 import { InputForm } from "./styles";
 
-function Input({ type, placeholder, label, dataUser, value }) {
+function Input({
+  type,
+  placeholder,
+  label,
+  dataUser,
+  value,
+  className,
+  display,
+  readOnly,
+}) {
   return (
     <InputForm>
-      <label style={{ color: "black" }} htmlFor="">
+      <label style={{ color: "black", display: display }} htmlFor="">
         {label}
       </label>
       <input
@@ -11,6 +20,8 @@ function Input({ type, placeholder, label, dataUser, value }) {
         placeholder={placeholder}
         {...dataUser}
         value={value}
+        className={className}
+        readOnly={readOnly}
       />
     </InputForm>
   );
