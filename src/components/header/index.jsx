@@ -5,7 +5,8 @@ import { TfiMenu } from "react-icons/tfi";
 import api from "../../services/api";
 
 function Header() {
-  const { name } = loginStore((state) => state.user);
+  const user = loginStore((state) => state.login);
+  const dataUser = loginStore((state) => state.user);
 
   useEffect(() => {
     const token = localStorage.getItem("estoque:token");
@@ -17,6 +18,7 @@ function Header() {
           const { data } = await api.get("/users");
 
           console.log("---data--->", data);
+          user(data);
         } catch (error) {
           console.log(error);
         }
@@ -24,13 +26,13 @@ function Header() {
     }
 
     loadUser();
-  }, []);
+  }, [user]);
 
   return (
     <SectionStyle>
       <div>
-        <img src="" alt="" />
-        <span>Bom dia {name}</span>
+        <img src="" alt="Foto de perfil" />
+        <span>Bom dia {dataUser.name}</span>
       </div>
       <div>
         <span>
