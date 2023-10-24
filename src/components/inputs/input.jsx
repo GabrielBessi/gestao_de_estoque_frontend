@@ -11,11 +11,11 @@ function Input({
   readOnly,
 }) {
   return (
-    <InputForm>
+    <>
       <label style={{ color: "black", display: display }} htmlFor="">
         {label}
       </label>
-      <input
+      <InputForm
         type={type}
         placeholder={placeholder}
         {...dataUser}
@@ -23,8 +23,11 @@ function Input({
         className={className}
         readOnly={readOnly}
       />
-    </InputForm>
+    </>
   );
+}
+{
+  /* <input /> */
 }
 
 export default Input;
