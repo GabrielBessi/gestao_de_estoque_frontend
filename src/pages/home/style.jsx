@@ -14,6 +14,7 @@ export const HeaderStyle = styled.header`
 
 export const BoardsHomeStyle = styled.main`
   display: flex;
+  justify-content: center;
 
   width: 100vw;
   height: 100vh;
@@ -22,7 +23,6 @@ export const BoardsHomeStyle = styled.main`
 
   div {
     display: flex;
-    justify-content: space-around;
 
     width: 90vw;
 

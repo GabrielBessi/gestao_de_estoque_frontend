@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
 import Input from "../../inputs/input";
-import { BoardOutPutStyles, FormOutPutProduct } from "./styles";
+import {
+  BoardOutPutStyles,
+  FormOutPutProduct,
+  InputSearchProduct,
+} from "./styles";
 import api from "../../../services/api";
 import { productStore } from "../../../store/products/productStore";
+import { FaSearch } from "react-icons/fa";
 
 function OutPutProduct() {
   const { register, handleSubmit } = useForm();
@@ -10,17 +15,39 @@ function OutPutProduct() {
   const dataProduct = productStore((state) => state.product);
 
   function getProduct({ idProduct }) {
-    api.get(`/products/${idProduct}`).then((response) => {
-      product(response.data);
-    });
+    api
+      .get(`/products/${idProduct}`)
+      .then((response) => {
+        console.log(response.data);
+        product(response.data);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  }
+
+  function outProduct({ quantity }) {
+    let productData = {
+      code_product: dataProduct.code_product,
+      quantity: parseInt(quantity),
+    };
+
+    api
+      .patch(`/products/exit-of-products`, productData)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+      });
   }
 
   return (
     <BoardOutPutStyles>
-      <div>
-        <p style={{ color: "black" }}>SAÍDA PRODUTO</p>
+      <div id="titleBoardOutPutProducts">
+        <span style={{ color: "black" }}>SAÍDA PRODUTO</span>
       </div>
-      <div>
+      <InputSearchProduct>
         <form onSubmit={handleSubmit(getProduct)}>
           <Input
             type={"text"}
@@ -28,11 +55,13 @@ function OutPutProduct() {
             display={"none"}
             dataUser={register("idProduct")}
           />
-          <button type="submit">ok</button>
+          <button type="submit">
+            <FaSearch />
+          </button>
         </form>
-      </div>
+      </InputSearchProduct>
 
-      <FormOutPutProduct>
+      <FormOutPutProduct onSubmit={handleSubmit(outProduct)}>
         <Input
           type={"text"}
           placeholder={"Nome do produto"}
@@ -59,13 +88,14 @@ function OutPutProduct() {
             readOnly
           />
         </div>
+
         <div className="input_third">
           <Input
             type={"number"}
             placeholder={"Quantidade retirada"}
             display={"none"}
             className={"input_third_amountOut"}
-            readOnly
+            dataUser={register("quantity")}
           />
           <button type="submit">Retirar</button>
         </div>

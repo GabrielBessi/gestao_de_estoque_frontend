@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
         border-radius: 50px;
     }
 
+    button {
+        border: none
+    }
+
     label {
         display: flex;
         width: 70%;
