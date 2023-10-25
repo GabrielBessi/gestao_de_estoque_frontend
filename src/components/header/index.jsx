@@ -1,12 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { loginStore } from "../../store/loginStore";
 import { SectionStyle } from "./style";
 import { TfiMenu } from "react-icons/tfi";
 import api from "../../services/api";
+import SideBar from "../sideBar";
 
 function Header() {
   const user = loginStore((state) => state.login);
   const dataUser = loginStore((state) => state.user);
+  const [sideBar, setSideBar] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("estoque:token");
@@ -17,7 +19,7 @@ function Header() {
           api.defaults.headers.authorization = `Bearer ${token}`;
           const { data } = await api.get("/users");
 
-          console.log("---data--->", data);
+          // console.log("---data--->", data);
           user(data);
         } catch (error) {
           console.log(error);
@@ -36,7 +38,8 @@ function Header() {
       </div>
       <div>
         <span>
-          <TfiMenu />
+          <TfiMenu onClick={() => setSideBar(!sideBar)} />
+          {sideBar && <SideBar active={setSideBar} sideBar={sideBar} />}
         </span>
       </div>
     </SectionStyle>

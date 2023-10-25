@@ -10,6 +10,7 @@ export const HeaderStyle = styled.header`
   justify-content: center;
 
   background-color: #ffa24d;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3);
 `;
 
 export const BoardsHomeStyle = styled.main`
