@@ -28,4 +28,7 @@ export const SectionStyle = styled.section`
       border-radius: 50px;
     }
   }
+  span {
+    cursor: pointer;
+  }
 `;
