@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import LoginPage from "../pages/login/login";
 import RegisterPage from "../pages/register/register";
 import HomePage from "../pages/home";
+import ViewStorage from "../components/boards/viewStorage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <HomePage />,
+  },
+  {
+    path: "view-storage",
+    element: <ViewStorage />,
   },
 ]);
 

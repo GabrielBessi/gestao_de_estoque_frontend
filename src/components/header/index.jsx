@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { loginStore } from "../../store/loginStore";
-import { SectionStyle } from "./style";
+import { HeaderStyle, SectionStyle } from "./style";
 import { TfiMenu } from "react-icons/tfi";
 import api from "../../services/api";
 import SideBar from "../sideBar";
@@ -19,8 +19,8 @@ function Header() {
           api.defaults.headers.authorization = `Bearer ${token}`;
           const { data } = await api.get("/users");
 
-          // console.log("---data--->", data);
-          user(data);
+          console.log("---data--->", data[0]);
+          user(data[0]);
         } catch (error) {
           console.log(error);
         }
@@ -31,18 +31,22 @@ function Header() {
   }, [user]);
 
   return (
-    <SectionStyle>
-      <div>
-        <img src="" alt="Foto de perfil" />
-        <span>Bom dia {dataUser.name}</span>
-      </div>
-      <div>
-        <span>
-          <TfiMenu onClick={() => setSideBar(!sideBar)} />
-          {sideBar && <SideBar active={setSideBar} sideBar={sideBar} />}
-        </span>
-      </div>
-    </SectionStyle>
+    <>
+      <HeaderStyle>
+        <SectionStyle>
+          <div>
+            <img src="" alt="Foto de perfil" />
+            <span>Bom dia {dataUser.name}</span>
+          </div>
+          <div>
+            <span>
+              <TfiMenu onClick={() => setSideBar(!sideBar)} />
+              {sideBar && <SideBar active={setSideBar} sideBar={sideBar} />}
+            </span>
+          </div>
+        </SectionStyle>
+      </HeaderStyle>
+    </>
   );
 }
 

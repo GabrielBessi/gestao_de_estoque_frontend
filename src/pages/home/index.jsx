@@ -2,7 +2,7 @@ import OutPutProduct from "../../components/boards/outPutProduct";
 import ShoppingList from "../../components/boards/shoppingList";
 import Header from "../../components/header";
 import { loginStore } from "../../store/loginStore";
-import { BoardsHomeStyle, HeaderStyle } from "./style";
+import { BoardsHomeStyle } from "./style";
 
 function HomePage() {
   const dataUser = loginStore((state) => state.user);
@@ -11,9 +11,7 @@ function HomePage() {
 
   return (
     <>
-      <HeaderStyle>
-        <Header />
-      </HeaderStyle>
+      <Header />
       <BoardsHomeStyle>
         <div>
           <ShoppingList />
