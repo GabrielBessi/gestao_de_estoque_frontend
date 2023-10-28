@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerSideBar = styled.div`
-  background-color: #f9f9f9;
+  background-color: var(--color-second-grey1);
   z-index: 99999;
   position: fixed;
   height: 120vh;
@@ -31,7 +31,7 @@ export const ContentCodeBar = styled.ul`
 
   > svg {
     position: relative;
-    color: #ffa24d;
+    color: var(--color-primary-orange);
     left: 200px;
     bottom: 30px;
     cursor: pointer;

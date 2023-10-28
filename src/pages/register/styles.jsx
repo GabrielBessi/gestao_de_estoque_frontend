@@ -7,10 +7,10 @@ export const ButtonLink = styled(Link)`
   width: 70%;
   font-size: 20px;
 
-  color: #ffa24d;
+  color: var(--color-primary-orange);
 
   :hover {
-    color: red;
+    color: var(--color-hover-button);
     transition: all 0.35s;
   }
 `;
@@ -31,7 +31,7 @@ export const RegisterForm = styled.section`
     width: 29.28vw;
     height: 65vh;
 
-    background-color: #f9f9f9;
+    background-color: var(--color-second-grey);
 
     border-radius: 0px 0px 20px 20px;
 
@@ -55,10 +55,10 @@ export const RegisterForm = styled.section`
 
       margin-top: -10px;
 
-      background-color: #ffa24d;
+      background-color: var(--color-primary-orange);
       border-radius: 50px;
 
-      color: white;
+      color: var(--color-font-black1);
 
       position: relative;
       transition: all 0.35s;

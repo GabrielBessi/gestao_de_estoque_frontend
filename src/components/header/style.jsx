@@ -10,7 +10,7 @@ export const HeaderStyle = styled.header`
   align-items: center;
   justify-content: center;
 
-  background-color: #ffa24d;
+  background-color: var(--color-primary-orange);
   box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3);
 `;
 
@@ -37,7 +37,7 @@ export const SectionStyle = styled.section`
       width: 40px;
       height: 40px;
 
-      border: 2px solid white;
+      border: 2px solid var(--color-font-white);
 
       border-radius: 50px;
     }

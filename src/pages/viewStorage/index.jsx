@@ -1,5 +1,5 @@
-import { loginStore } from "../../../store/loginStore";
-import Header from "../../header";
+import Header from "../../components/header";
+import { loginStore } from "../../store/loginStore";
 import { SectionStorage, TableStorage as Table } from "./styles";
 import { BsGearFill } from "react-icons/bs";
 
@@ -13,7 +13,7 @@ function ViewStorage() {
         <Table>
           <thead>
             <tr>
-              <th>Código</th>
+              <th className="storage_code_product">Código</th>
               <th>Produto</th>
               <th>Marca</th>
               <th>Modelo</th>
@@ -21,11 +21,11 @@ function ViewStorage() {
               <th>Valor unid</th>
               <th>Valor total</th>
               <th>Atualização</th>
-              <th>Detalhes</th>
+              <th className="storage_details_product">Detalhes</th>
             </tr>
           </thead>
           <tbody>
-            {productsStorage.map(
+            {productsStorage?.map(
               ({ _id, code_product, name_product, brand, model, quantity }) => (
                 <tr key={_id}>
                   <th>{code_product}</th>

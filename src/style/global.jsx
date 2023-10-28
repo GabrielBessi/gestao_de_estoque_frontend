@@ -34,4 +34,14 @@ export const GlobalStyle = createGlobalStyle`
 
         align-items: flex-start;
     }
+
+    :root {
+        --color-primary-orange: #ffa24d;
+        --color-second-grey1: #f9f9f9;
+
+        --color-hover-button: red;
+
+        --color-font-white: #ffffff;
+        --color-font-black1: #000000
+    }
 `;

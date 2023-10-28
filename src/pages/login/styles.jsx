@@ -18,10 +18,10 @@ export const HeaderForm = styled.div`
   width: 29.28vw;
   height: 40px;
 
-  color: white;
+  color: var(--color-font-white);
   font-weight: 800;
   font-size: 20px;
-  background-color: #ffa24d;
+  background-color: var(--color-primary-orange);
 
   border-radius: 20px 20px 0px 0px;
 `;
@@ -41,7 +41,7 @@ export const LoginForm = styled.section`
     width: 29.28vw;
     height: 300px;
 
-    background-color: #f9f9f9;
+    background-color: var(--color-second-grey);
 
     border-radius: 0px 0px 20px 20px;
 
@@ -58,7 +58,7 @@ export const LoginForm = styled.section`
     }
 
     p {
-      color: black;
+      color: var(--color-font-black1);
       font-size: 12px;
     }
 
@@ -69,10 +69,10 @@ export const LoginForm = styled.section`
 
       margin-top: 20px;
 
-      background-color: #ffa24d;
+      background-color: var(--color-primary-orange);
       border-radius: 50px;
 
-      color: white;
+      color: var(--color-font-white);
 
       position: relative;
       transition: all 0.35s;
@@ -97,7 +97,7 @@ export const LoginForm = styled.section`
     }
 
     button:hover {
-      color: #fff;
+      color: var(--color-font-white);
       cursor: pointer;
     }
 
