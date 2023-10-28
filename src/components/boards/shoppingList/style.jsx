@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const ShoppingStyle = styled.section`
   display: flex;
   flex-direction: column;
-  color: black;
+  color: var(--color-font-black1);
 
   align-items: center;
 
-  /* border: 1px solid black; */
-  background-color: #f9f9f9;
+  background-color: var(--color-second-grey1);
 
   border-radius: 20px 20px 20px 20px;
 
@@ -21,7 +20,6 @@ export const ShoppingStyle = styled.section`
 export const ListProductsStyle = styled.ul`
   display: flex;
 
-  /* background-color: beige; */
   justify-content: center;
 
   height: 60.076vh;
@@ -38,12 +36,12 @@ export const ListProductsStyle = styled.ul`
     width: 110%;
 
     justify-content: space-between;
-    background-color: #ffa24d;
+    background-color: var(--color-primary-orange);
 
     border-radius: 10px;
 
     span {
-      color: white;
+      color: var(--color-font-white);
     }
   }
 `;

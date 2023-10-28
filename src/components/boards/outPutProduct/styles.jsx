@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BoardOutPutStyles = styled.section`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+
   align-content: flex-start;
   margin: 0 auto;
 
@@ -12,7 +12,7 @@ export const BoardOutPutStyles = styled.section`
 
   min-width: 320px;
 
-  background-color: #f9f9f9;
+  background-color: var(--color-second-grey1);
 
   border-radius: 20px 20px 20px 20px;
 
@@ -36,9 +36,6 @@ export const InputSearchProduct = styled.div`
   margin: 0 auto;
   width: 35.603vw;
   max-width: 220px;
-  /* padding-right: 100px; */
-
-  /* background-color: blue; */
 
   form {
     display: flex;
@@ -62,8 +59,8 @@ export const InputSearchProduct = styled.div`
       border-radius: 50px;
       cursor: pointer;
 
-      background-color: #ffa24d;
-      color: white;
+      background-color: var(--color-primary-orange);
+      color: var(--color-font-white);
     }
   }
 `;
@@ -84,8 +81,6 @@ export const FormOutPutProduct = styled.form`
     position: relative;
     bottom: 25px;
     left: 20px;
-    /* margin-right: 28px; */
-
     width: 25.942vw;
     min-width: 265px;
   }
@@ -135,7 +130,7 @@ export const FormOutPutProduct = styled.form`
       height: 30px;
       cursor: pointer;
       border-radius: 50px;
-      background-color: red;
+      background-color: var(--color-hover-button);
       color: white;
     }
   }

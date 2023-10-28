@@ -19,7 +19,6 @@ function Header() {
           api.defaults.headers.authorization = `Bearer ${token}`;
           const { data } = await api.get("/users");
 
-          console.log("---data--->", data[0]);
           user(data[0]);
         } catch (error) {
           console.log(error);

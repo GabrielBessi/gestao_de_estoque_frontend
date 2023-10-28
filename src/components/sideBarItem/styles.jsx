@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export const ContainerSideBarItem = styled(Link)`
   display: flex;
   align-items: center;
-  background-color: #ffa24d;
+  background-color: var(--color-primary-orange);
   font-size: 18px;
   width: 200px;
-  color: white;
+  color: var(--color-font-white);
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
@@ -18,6 +18,6 @@ export const ContainerSideBarItem = styled(Link)`
   }
 
   &:hover {
-    background-color: black;
+    background-color: var(--color-font-black1);
   }
 `;
