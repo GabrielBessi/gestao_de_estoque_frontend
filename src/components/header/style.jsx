@@ -1,5 +1,19 @@
 import { styled } from "styled-components";
 
+export const HeaderStyle = styled.header`
+  display: flex;
+
+  /* width: 100vw; */
+  height: 6.615vh;
+  width: 100vw;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffa24d;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3);
+`;
+
 export const SectionStyle = styled.section`
   display: flex;
   flex-direction: row;

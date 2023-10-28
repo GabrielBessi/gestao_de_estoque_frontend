@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const ContainerSideBarItem = styled.li`
+export const ContainerSideBarItem = styled(Link)`
   display: flex;
   align-items: center;
   background-color: #ffa24d;

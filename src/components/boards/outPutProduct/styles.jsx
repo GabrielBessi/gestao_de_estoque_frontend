@@ -60,6 +60,7 @@ export const InputSearchProduct = styled.div`
       width: 30px;
       height: 30px;
       border-radius: 50px;
+      cursor: pointer;
 
       background-color: #ffa24d;
       color: white;
@@ -132,7 +133,7 @@ export const FormOutPutProduct = styled.form`
     button {
       width: 300px;
       height: 30px;
-
+      cursor: pointer;
       border-radius: 50px;
       background-color: red;
       color: white;

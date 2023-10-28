@@ -1,8 +1,8 @@
 import { ContainerSideBarItem } from "./styles";
 
-const SideBarItem = ({ Icon, Text }) => {
+const SideBarItem = ({ Icon, Text, link }) => {
   return (
-    <ContainerSideBarItem>
+    <ContainerSideBarItem to={link}>
       <Icon />
       {Text}
     </ContainerSideBarItem>
