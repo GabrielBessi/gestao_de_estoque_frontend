@@ -8,8 +8,8 @@ import SideBarItem from "../sideBarItem";
 const SideBar = ({ active, sideBar }) => {
   return (
     <ContainerSideBar active={`${active}`}>
-      <FaTimes onClick={() => active(!sideBar)} />
       <ContentCodeBar>
+        <FaTimes onClick={() => active(!sideBar)} />
         <SideBarItem Icon={BiSolidCabinet} Text={"Atualizar"} />
         <SideBarItem Icon={HiEye} Text={"Estoque"} />
         <SideBarItem Icon={BiHistory} Text={"Histórico"} />
