@@ -2,23 +2,13 @@ import styled from "styled-components";
 
 export const ContainerSideBar = styled.div`
   background-color: #f9f9f9;
+  z-index: 99999;
   position: fixed;
-  height: 100%;
+  height: 120vh;
   top: 0px;
   right: 0px;
-  width: 300px;
   right: ${(props) => (props.active ? "0" : "-100%")};
   animation: showSidebar 0.4s;
-
-  > svg {
-    position: relative;
-    color: #ffa24d;
-    bottom: 420px;
-    left: 250px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
 
   @keyframes showSidebar {
     from {
@@ -35,6 +25,15 @@ export const ContainerSideBar = styled.div`
 export const ContentCodeBar = styled.ul`
   display: flex;
   position: relative;
-  bottom: 120px;
+  bottom: 08em;
+  right: 1em;
   flex-direction: column;
+
+  > svg {
+    position: relative;
+    color: #ffa24d;
+    left: 200px;
+    bottom: 30px;
+    cursor: pointer;
+  }
 `;

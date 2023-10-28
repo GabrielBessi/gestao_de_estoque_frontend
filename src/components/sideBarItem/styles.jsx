@@ -4,7 +4,8 @@ export const ContainerSideBarItem = styled.li`
   display: flex;
   align-items: center;
   background-color: #ffa24d;
-  font-size: 20px;
+  font-size: 18px;
+  width: 200px;
   color: white;
   padding: 10px;
   cursor: pointer;
