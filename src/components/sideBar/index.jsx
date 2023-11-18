@@ -11,7 +11,11 @@ const SideBar = ({ active, sideBar }) => {
       <ContentCodeBar>
         <FaTimes onClick={() => active(!sideBar)} />
         <SideBarItem Icon={HiHome} Text={"Home"} link={"/home"} />
-        <SideBarItem Icon={BiSolidCabinet} Text={"Atualizar"} />
+        <SideBarItem
+          Icon={BiSolidCabinet}
+          Text={"Atualizar"}
+          link={"/update-storage"}
+        />
         <SideBarItem Icon={HiEye} Text={"Estoque"} link={"/view-storage"} />
         <SideBarItem Icon={BiHistory} Text={"Histórico"} />
         <SideBarItem Icon={FaPaste} Text={"Notas fiscais"} />
