@@ -1,5 +1,6 @@
 import { FaTimes } from "react-icons/fa";
-import { BiSolidCabinet, BiHistory, BiSolidExit } from "react-icons/bi";
+import { BiHistory, BiSolidExit } from "react-icons/bi";
+import { MdUpdate } from "react-icons/md";
 import { FaPaste } from "react-icons/fa";
 import { HiEye, HiHome } from "react-icons/hi";
 import { ContainerSideBar, ContentCodeBar } from "./styles";
@@ -12,7 +13,7 @@ const SideBar = ({ active, sideBar }) => {
         <FaTimes onClick={() => active(!sideBar)} />
         <SideBarItem Icon={HiHome} Text={"Home"} link={"/home"} />
         <SideBarItem
-          Icon={BiSolidCabinet}
+          Icon={MdUpdate}
           Text={"Atualizar"}
           link={"/update-storage"}
         />

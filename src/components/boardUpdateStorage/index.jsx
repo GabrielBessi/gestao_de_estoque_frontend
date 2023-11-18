@@ -7,7 +7,6 @@ function BoardUpdateStorage() {
   const { register, handleSubmit } = useForm();
 
   function updateProduct(dataProduct) {
-    console.log(dataProduct);
     api
       .post("products/new", { ...dataProduct, type: "entrada" })
       .then((response) => {

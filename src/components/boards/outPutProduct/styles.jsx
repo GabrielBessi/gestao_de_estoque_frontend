@@ -9,21 +9,18 @@ export const BoardOutPutStyles = styled.section`
 
   height: 250px;
   width: 30.603vw;
-
   min-width: 320px;
 
   background-color: var(--color-second-grey1);
-
   border-radius: 20px 20px 20px 20px;
-
   box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.1);
 
   #titleBoardOutPutProducts {
     display: flex;
 
     width: 30.603vw;
-
     min-width: 320px;
+
     align-items: center;
     justify-content: flex-start;
   }
