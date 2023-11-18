@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const FormBoardUpdate = styled.form`
-  width: 700px;
+  display: flex;
+  flex-direction: column;
+  width: 54.6875vw;
+  min-width: 310px;
   height: 400px;
   margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
 
   background-color: var(--color-second-grey1);
 
@@ -14,13 +19,17 @@ export const FormBoardUpdate = styled.form`
   div {
     display: flex;
     margin-top: 3%;
-    width: 700px;
+    width: 54.6875vw;
     justify-content: center;
 
     span {
-      color: var(--color-font-black1);
+      color: var(--color-primary-orange);
       font-weight: 800;
       font-size: 18px;
+
+      @media screen and (max-width: 356px) {
+        font-size: 15px;
+      }
     }
 
     /* select {
@@ -35,6 +44,8 @@ export const FormBoardUpdate = styled.form`
 
   input {
     display: flex;
+    width: 19.84vw;
+    min-width: 120px;
     border: 1px solid var(--color-second-grey2);
     flex-direction: row;
     padding: 1%;
@@ -43,6 +54,7 @@ export const FormBoardUpdate = styled.form`
   .columnInput {
     display: flex;
     margin-top: 2vh;
+    gap: 20px;
   }
 
   .columnInput_1 {
@@ -59,10 +71,12 @@ export const FormBoardUpdate = styled.form`
 
   textarea {
     border: 1px solid var(--color-second-grey2);
+    width: 48.4375vw;
+    min-width: 265px;
   }
 
   button {
-    background-color: var(--color-success-button);
+    background-color: var(--color-primary-orange);
     color: var(--color-font-white);
     font-weight: 700;
     width: 300px;
