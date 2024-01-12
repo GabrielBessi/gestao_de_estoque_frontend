@@ -6,22 +6,54 @@ import { FormBoardUpdate as Form } from "./styles";
 function BoardUpdateStorage() {
   const { register, handleSubmit } = useForm();
 
-  function updateProduct(dataProduct) {
-    api
-      .post("products/new", { ...dataProduct, type: "entrada" })
+  async function updateProduct(dataProduct) {
+
+    if (dataProduct.type_action === "new") {
+      delete dataProduct.type_action
+
+      await api
+      .post(`products/new`, {
+        ...dataProduct,
+        type: "entrada",
+        updatedAt: new Date().toDateString(),
+      })
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
         console.log(error.response.data);
       });
+      
+    } else {
+      delete dataProduct.type_action
+
+      await api
+      .patch(`products/${dataProduct.code_product}`, {
+        ...dataProduct,
+        type: "entrada",
+        updatedAt: new Date().toDateString(),
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+    }
+
+    delete dataProduct.type_action
+
+    console.log("state", dataProduct);
+
+
   }
 
   return (
     <Form onSubmit={handleSubmit(updateProduct)}>
-      <div>
-        <span>ATUALIZAR ESTOQUE</span>
-      </div>
+      <select name="" id="" {...register("type_action")}>
+        <option value="new">Adicionar novo produto</option>
+        <option value="updated_product">Atualizar Estoque</option>
+      </select>
       <div className="columnInput">
         <div className="columnInput_1">
           <Input
